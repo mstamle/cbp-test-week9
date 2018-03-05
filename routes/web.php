@@ -12,11 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('homepage');
 })->name('homepage');
 
 Auth::routes();
-
 Route::get('/hero','HeroController@index');
 Route::post('/hero','HeroController@store');
 
