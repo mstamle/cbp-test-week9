@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use \app\Hero;
+use \app\Emergency;
 
 class HeroController extends Controller
 {
@@ -23,5 +24,14 @@ class HeroController extends Controller
         $view = view('hero/show');
         $view->hero = $hero;
         return $view;
+    }
+    public function store(Request $request)
+    {
+        $newRow = new \App\Emergency();
+        $newRow->subject = $request->get('subject');
+        $newRow->description = $request->input('description');
+        $newRow->save();
+
+        return redirect(action('HeroController@index'));
     }
 }
