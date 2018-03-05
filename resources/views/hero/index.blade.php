@@ -4,4 +4,8 @@
 
 <h1>The hero roster</h1>
 
+@foreach($heros as $hero)
+{{ $hero->name }}
+@endforeach
+
 @endsection
