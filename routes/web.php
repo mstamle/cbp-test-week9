@@ -20,6 +20,6 @@ Auth::routes();
 Route::get('/hero','HeroController@index');
 Route::post('/hero','HeroController@store');
 
-Route::get('/hero/{hero_slug}','HeroController@show');
+Route::get('/hero/{hero_slug}','HeroController@show')->name('show hero');
 
 // Route::get('/home', 'HomeController@index')->name('home');

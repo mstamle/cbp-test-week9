@@ -5,7 +5,8 @@
 <h1>The hero roster</h1>
 
 @foreach($heros as $hero)
-{{ $hero->name }} <br/>
+<a href="{{ route('show hero', ['hero_slug' => $hero->slug]) }}">{{ $hero->name }}</a>
+
 @endforeach
 
 @endsection
