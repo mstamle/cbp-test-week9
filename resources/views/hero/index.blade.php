@@ -5,7 +5,7 @@
 <h1>The hero roster</h1>
 
 @foreach($heros as $hero)
-{{ $hero->name }}
+{{ $hero->name }} <br/>
 @endforeach
 
 @endsection
